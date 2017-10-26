@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>BAS</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -19,6 +19,26 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+            }
+
+            h1 {
+                font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+                font-weight: 700;
+                font-size: 30px;
+                color: #222;
+                letter-spacing: 9px;
+                text-transform: uppercase;
+                margin: 12px 0;
+                left: 4px;
+            }
+            h2{
+                color: #999;
+                font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+                font-weight: normal;
+                font-size: 15px;
+                letter-spacing: .12em;
+                margin-bottom: 30px;
+                left: 3px;
             }
 
             .full-height {
@@ -78,17 +98,15 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                <h1>Benni Asal</h1>
+                <h2 class="m-b-md">Design, Code & Things in Between </h2>
 
-                <div class="links">
+                <!-- <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                    <a href="https://github.com/bennias">GitHub</a>
+                </div> -->
             </div>
         </div>
     </body>
