@@ -1,8 +1,4 @@
-<?php
-
 @extends('layouts.app')
-
-//this will add laravel’s default navbar to your page
 
 @section('content')
 <div class="container">
