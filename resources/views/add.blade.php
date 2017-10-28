@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
     
-    <h2>Add New Task</h2>           
+    <h2>Add New Task</h2>    
+           
     <form method="POST" action="/task">
         <div class="form-group">
             <textarea name="description" class="form-control"></textarea>  
@@ -18,3 +19,5 @@
 
 </div>
 @endsection
+
+

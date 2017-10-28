@@ -22,27 +22,29 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-inverse bg-primary navbar-static-top navbar-toggleable-md">
+        <nav class="navbar navbar-inverse navbar-static-top navbar-toggleable-md">
             <!-- Collapsed Hamburger Icon -->
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{ url('/home') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <!-- <div class="collapse navbar-collapse" id="navbarCollapse"> -->
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
+                <ul>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
+                    <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">Login</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">Register</a>
-                        </li>
+                        
                     @else
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -65,7 +67,7 @@
                         </li>
                     @endif
                 </ul>
-            </div>
+            <!-- </div> -->
         </nav>
 
         @yield('content')

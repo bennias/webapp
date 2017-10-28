@@ -16,16 +16,16 @@ class TasksController extends Controller
 
     public function add()
     {
-    	return view('add');
+        return view('add');
     }
 
     public function create(Request $request)
     {
     	$task = new Task();
     	$task->description = $request->description;
-    	$task->user_id = Auth::id();
+        $task->user_id = Auth::id();
     	$task->save();
-    	return redirect('/home'); 
+    	return redirect('/home');
     }
 
     public function edit(Task $task)

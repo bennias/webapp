@@ -1,0 +1,75 @@
+
+// Bootstrap Components Overrides
+#app{
+    min-height: 100vh;
+}
+
+.nav-item{
+    list-style: none !important;
+}   
+
+
+.navbar{
+    margin-bottom: 10vh;
+    border-radius: 0 !important;
+    background: $navbar-bg;
+    box-shadow: $shadow;
+    .navbar-brand{
+        font-weight: bold;
+    }
+    &:hover{
+        color: $brand-primary;
+    }
+    a {
+        color: #333;
+        &:hover{
+            color: $brand-primary;
+        }
+    }
+    ul{
+        max-width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    ul li{
+        display: inline;
+        padding: 0.5em;
+        float: right;
+    }
+}
+
+.table thead th {
+    border-top: 0;
+    border-bottom: 0px !important;
+}
+
+.table th, .table td {
+    padding: 1em;
+    vertical-align: middle !important;
+    border-top: 1px solid #eceeef;
+}
+td:nth-child(2){ 
+    form{
+    float: right;
+    }
+}
+ 
+.btn-danger{
+    background-color: $red!important;
+    border-color: $red!important;
+}
+
+.mt-5{
+    margin-top: 5em;
+}
+
+.form-group{
+    padding: 1.5em 0;
+}
+
+.card{
+    box-shadow: $shadow;
+}
+.card-header{
+    font-weight: bold;
+}
