@@ -6,4 +6,9 @@
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// 3.3.7 Stable Version
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// 4 Alpha Version
+@import "node_modules/bootstrap/scss/bootstrap";

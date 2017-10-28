@@ -10,6 +10,7 @@ Follow the instructions below
 
 What things you need to install the software and how to install them
 
+* Node - https://nodejs.org/en/
 * Composer - https://getcomposer.org/doc/00-intro.md
 * Vagrant - https://www.vagrantup.com/
 
@@ -26,6 +27,7 @@ git clone https://github.com/bennias/webapp.git
 move into the Directory and install project dependencies with composer
 
 ```
+npm install
 composer install
 ```
 
