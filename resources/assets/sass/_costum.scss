@@ -27,7 +27,7 @@
         }
     }
     ul{
-        max-width: 80vw;
+        // max-width: 80vw;
         margin-left: auto;
         margin-right: auto;
     }
@@ -72,4 +72,7 @@ td:nth-child(2){
 }
 .card-header{
     font-weight: bold;
+}
+.dropdown-item{
+    text-align: center!important;
 }
