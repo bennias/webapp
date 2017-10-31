@@ -5,9 +5,9 @@
     
     <h2>Add New Task</h2>    
            
-    <form method="POST" action="/task">
+    <form id="AddTask" method="POST" action="/task">
         <div class="form-group">
-            <textarea name="description" class="form-control"></textarea>  
+            <textarea name="description" class="form-control" required></textarea>  
         </div>
 
         <div class="form-group">
@@ -16,6 +16,9 @@
 
         {{ csrf_field() }}
     </form>
+    <script>
+        $("#AddTask").validate();
+    </script>
 
 </div>
 @endsection
