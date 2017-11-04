@@ -21,8 +21,9 @@ class TasksController extends Controller
 
     public function create(Request $request)
     {
-    	$task = new Task();
-    	$task->description = $request->description;
+        $task = new Task();
+        $task->task_name = $request->task_name;
+        $task->description = $request->description;
         $task->user_id = Auth::id();
     	$task->save();
     	return redirect('/home');
@@ -33,7 +34,7 @@ class TasksController extends Controller
 
     	if (Auth::check() && Auth::user()->id == $task->user_id)
         {            
-                return view('edit', compact('task'));
+            return view('edit', compact('task'));
         }           
         else {
              return redirect('/home');
@@ -48,6 +49,7 @@ class TasksController extends Controller
     	}
     	else
     	{
+            $task->task_name = $request->task_name;
     		$task->description = $request->description;
 	    	$task->save();
 	    	return redirect('/home'); 

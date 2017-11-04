@@ -7,7 +7,8 @@
            
     <form id="AddTask" method="POST" action="/task">
         <div class="form-group">
-            <textarea name="description" class="form-control" required></textarea>  
+            <textarea name="task_name" class="form-control" placeholder="Aufgabe" required></textarea>  
+            <textarea name="description" class="form-control" placeholder="Beschreibung" required></textarea>  
         </div>
 
         <div class="form-group">

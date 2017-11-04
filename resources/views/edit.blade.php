@@ -7,6 +7,7 @@
     <form method="POST" action="/task/{{ $task->id }}">
     
         <div class="form-group">
+        <textarea name="task_name" class="form-control" required>{{$task->task_name}}</textarea>  
             <textarea name="description" class="form-control">{{$task->description }}</textarea>	
         </div>
         

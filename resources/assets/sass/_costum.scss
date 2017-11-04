@@ -1,3 +1,17 @@
+// Styling
+body{
+    color: white;
+    background-color: #1563FF;
+}
+.btn-primary {
+    color: #fff;
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0);
+    &:hover{
+        border-color: rgba(0, 0, 0, 0.55);
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+}
 
 // Bootstrap Components Overrides
 #app{
@@ -7,8 +21,6 @@
 .nav-item{
     list-style: none !important;
 }   
-
-
 .navbar{
     margin-bottom: 10vh;
     border-radius: 0 !important;
@@ -76,3 +88,29 @@ td:nth-child(2){
 .dropdown-item{
     text-align: center!important;
 }
+
+// Table
+.table thead th{
+    color: white;
+}
+.table-done{
+    opacity: 0.3;
+}
+thead tr{
+    background: transparent !important;
+    box-shadow: none !important;
+}
+table tr{
+    background: white;
+    color: black;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.16);
+}
+table{
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+}
+
+
+// Styling
+

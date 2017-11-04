@@ -8,18 +8,54 @@
             <table class="table mt-5">
                 <thead>
                     <tr>
-                        <th colspan="2">Tasks</th>
+                        <th colspan="2">To Do</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($user->tasks as $task)
                         <tr>
                             <td>
+                                {{$task->task_name}}
+                            </td>
+                            <td>
                                 {{$task->description}}
                             </td>
                             <td>
+                                {{$task->created_at}}
+                            </td>
+                            <td>
                                 <form action="/task/{{$task->id}}">
+                                    <button type="submit" name="done" formmethod="POST" class="btn btn-success">Done</button>
                                     <button type="submit" name="edit" class="btn btn-primary">Edit</button>
+                                    <!-- <button type="submit" name="delete" formmethod="POST" class="btn btn-danger">Delete</button> -->
+                                    {{ csrf_field() }}
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            <table class="table table-done mt-5">
+                <thead>
+                    <tr>
+                        <th colspan="2">Done</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($user->tasks as $task)
+                        <tr>
+                            <td>
+                                {{$task->task_name}}
+                            </td>
+                            <td>
+                                {{$task->description}}
+                            </td>
+                            <td>
+                                {{$task->created_at}}
+                            </td>
+                            <td>
+                                <form action="/task/{{$task->id}}">
+                                    <button name="" class="btn btn-secondary">Undo</button>
                                     <button type="submit" name="delete" formmethod="POST" class="btn btn-danger">Delete</button>
                                     {{ csrf_field() }}
                                 </form>

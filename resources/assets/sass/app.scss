@@ -4,6 +4,15 @@
 // Fonts
 // @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
+// Bootstrap
+
+// 3.3.7 Stable Version
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// 4 Alpha Version
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
 
 
 // Variables
@@ -12,10 +21,4 @@
 // Overrides
 @import "costum";
 
-// Bootstrap
 
-// 3.3.7 Stable Version
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
-// 4 Alpha Version
-@import "node_modules/bootstrap/scss/bootstrap";
