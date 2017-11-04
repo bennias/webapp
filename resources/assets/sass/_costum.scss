@@ -1,18 +1,25 @@
 // Styling
 body{
-    // color: black;
-    // background-color: white;
-    color: white;
-    background: #1563FF;
+    color: black;
+    background-color: #f5f5f5;
+    /*color: white;
+    background: #1563FF;*/
+    a {
+        color: $brand-blue;
+    }
+}
+.btn-primary{
+    background-color: $brand-blue;
+    border-color: $brand-blue;
 }
 .btn-task {
-    color: #fff;
-    border-color: white;
+    color: $brand-blue;
+    border-color: $brand-blue;
     background-color: rgba(0, 0, 0, 0);
-    &:hover{
+    &:hover {
         color: white;
-        border-color: rgba(0, 0, 0, 0.55);
-        background-color: rgba(0, 0, 0, 0.45);
+        border-color: $brand-blue;
+        background-color: $brand-blue;
     }
 }
 
@@ -43,12 +50,12 @@ body{
         font-weight: bold;
     }
     &:hover{
-        color: $brand-primary;
+        color: $brand-blue;
     }
     a {
         color: #333;
         &:hover{
-            color: $brand-primary;
+            color: $brand-blue;
         }
     }
     ul{
@@ -133,6 +140,7 @@ table{
     color: black;
     border-radius: 1px;
     border: none;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
 }
 .card_task{
     padding: 10px 0;
@@ -167,6 +175,15 @@ time{
 .wrapper{
     margin: 10vh 0 ;
 }
+.posts .post {
+    padding-left: 10px;
+    border-left: 2px solid $brand-blue;
+    margin-bottom: 30px;
 
+    .info {
+        font: #aaa;
+        font-style: italic;
+    }
+}
 // Styling
 

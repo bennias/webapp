@@ -6967,20 +6967,31 @@ a.text-danger:hover {
 }
 
 body {
-  color: white;
-  background: #1563FF;
+  color: black;
+  background-color: #f5f5f5;
+  /*color: white;
+    background: #1563FF;*/
+}
+
+body a {
+  color: #1563FF;
+}
+
+.btn-primary {
+  background-color: #1563FF;
+  border-color: #1563FF;
 }
 
 .btn-task {
-  color: #fff;
-  border-color: white;
+  color: #1563FF;
+  border-color: #1563FF;
   background-color: transparent;
 }
 
 .btn-task:hover {
   color: white;
-  border-color: rgba(0, 0, 0, 0.55);
-  background-color: rgba(0, 0, 0, 0.45);
+  border-color: #1563FF;
+  background-color: #1563FF;
 }
 
 .row {
@@ -7023,7 +7034,7 @@ body {
 }
 
 .navbar:hover {
-  color: #007bff;
+  color: #1563FF;
 }
 
 .navbar a {
@@ -7031,7 +7042,7 @@ body {
 }
 
 .navbar a:hover {
-  color: #007bff;
+  color: #1563FF;
 }
 
 .navbar ul {
@@ -7125,6 +7136,8 @@ table {
   color: black;
   border-radius: 1px;
   border: none;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
 }
 
 .card_task {
@@ -7163,5 +7176,16 @@ time {
 
 .wrapper {
   margin: 10vh 0;
+}
+
+.posts .post {
+  padding-left: 10px;
+  border-left: 2px solid #1563FF;
+  margin-bottom: 30px;
+}
+
+.posts .post .info {
+  font: #aaa;
+  font-style: italic;
 }
 
