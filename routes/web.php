@@ -17,12 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/', 'TasksController@index');
 
 // Auth::routes();
-Route::get('/home', 'TasksController@index');
+Route::get('/tasks', 'TasksController@index');
 
 Route::get('/task','TasksController@add');
 Route::post('/task','TasksController@create');

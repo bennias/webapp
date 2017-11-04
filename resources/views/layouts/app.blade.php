@@ -23,17 +23,10 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-inverse navbar-static-top navbar-toggleable-md">
-            <!-- Collapsed Hamburger Icon -->
-            <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/home') }}">
                 {{ config('app.name', 'BAS') }}
             </a>
-
-            <!-- <div class="collapse navbar-collapse" id="navbarCollapse"> -->
-
                 <!-- Right Side Of Navbar -->
                 <ul>
                     <!-- Authentication Links -->
@@ -46,6 +39,9 @@
                         </li>
                         
                     @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/tasks') }}">Tasks</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>

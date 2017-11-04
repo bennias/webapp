@@ -17,9 +17,7 @@ body{
 }
 
 // Bootstrap Components Overrides
-#app{
-    min-height: 100vh;
-}
+
 .row {
     margin-left: 0px; 
     margin-right: 0px; 
@@ -33,6 +31,14 @@ body{
     border-radius: 0 !important;
     background: $navbar-bg;
     box-shadow: $shadow;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .nav-item{
+        display: inline-block;
+        padding: 0 0.5em;
+    }
     .navbar-brand{
         font-weight: bold;
     }
@@ -46,14 +52,15 @@ body{
         }
     }
     ul{
-        // max-width: 80vw;
+        float: right;
         margin-left: auto;
-        margin-right: auto;
+        margin-bottom: 0;
+        padding: 0.5em;
     }
     ul li{
-        display: inline;
+        /*display: inline;
         padding: 0.5em;
-        float: right;
+        float: right;*/
     }
 }
 

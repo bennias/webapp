@@ -26,7 +26,7 @@ class TasksController extends Controller
         $task->description = $request->description;
         $task->user_id = Auth::id();
     	$task->save();
-    	return redirect('/home');
+    	return redirect('/tasks');
     }
 
     public function edit(Task $task)
@@ -37,7 +37,7 @@ class TasksController extends Controller
             return view('edit', compact('task'));
         }           
         else {
-             return redirect('/home');
+             return redirect('/tasks');
          }            	
     }
 
@@ -45,14 +45,14 @@ class TasksController extends Controller
     {
     	if(isset($_POST['delete'])) {
     		$task->delete();
-    		return redirect('/home');
+    		return redirect('/tasks');
     	}
     	else
     	{
             $task->task_name = $request->task_name;
     		$task->description = $request->description;
 	    	$task->save();
-	    	return redirect('/home'); 
+	    	return redirect('/tasks');
     	}    	
     }
 }
