@@ -1,13 +1,16 @@
 // Styling
 body{
+    // color: black;
+    // background-color: white;
     color: white;
-    background-color: #1563FF;
+    background: #1563FF;
 }
-.btn-primary {
+.btn-task {
     color: #fff;
     border-color: white;
     background-color: rgba(0, 0, 0, 0);
     &:hover{
+        color: white;
         border-color: rgba(0, 0, 0, 0.55);
         background-color: rgba(0, 0, 0, 0.45);
     }
@@ -79,9 +82,6 @@ td:nth-child(2){
     padding: 1.5em 0;
 }
 
-.card{
-    box-shadow: $shadow;
-}
 .card-header{
     font-weight: bold;
 }
@@ -109,6 +109,24 @@ table tr{
 table{
     border-collapse: separate;
     border-spacing: 0 0.5rem;
+}
+.table th, .table td {
+    padding: 0.75rem; 
+    border-top: 1px solid transparent;
+}
+.task_title{
+    font-weight: 700;
+}
+
+.card{
+    color: black;
+    border-radius: 1px;
+    border: none;
+    padding: 10px 0;
+}
+
+.container{
+    margin-top: 5em;
 }
 
 

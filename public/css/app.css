@@ -6968,16 +6968,17 @@ a.text-danger:hover {
 
 body {
   color: white;
-  background-color: #1563FF;
+  background: #1563FF;
 }
 
-.btn-primary {
+.btn-task {
   color: #fff;
   border-color: white;
   background-color: transparent;
 }
 
-.btn-primary:hover {
+.btn-task:hover {
+  color: white;
   border-color: rgba(0, 0, 0, 0.55);
   background-color: rgba(0, 0, 0, 0.45);
 }
@@ -7054,11 +7055,6 @@ td:nth-child(2) form {
   padding: 1.5em 0;
 }
 
-.card {
-  -webkit-box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.08);
-}
-
 .card-header {
   font-weight: bold;
 }
@@ -7092,5 +7088,26 @@ table tr {
 table {
   border-collapse: separate;
   border-spacing: 0 0.5rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  border-top: 1px solid transparent;
+}
+
+.task_title {
+  font-weight: 700;
+}
+
+.card {
+  color: black;
+  border-radius: 1px;
+  border: none;
+  padding: 10px 0;
+}
+
+.container {
+  margin-top: 5em;
 }
 

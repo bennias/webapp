@@ -12,7 +12,7 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Add Task</button>
+            <button type="submit" class="btn btn-task">Add Task</button>
         </div>
 
         {{ csrf_field() }}
