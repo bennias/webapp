@@ -4,10 +4,11 @@
 <section>
     <div class="col-md-6 col-md-offset-3">
         <header><h3>Allo Allo Waz up?</h3></header>
-        <form action="">
+        <form action="{{ route('post.create') }}" method="post">
             <div class="form-group">
-                <textarea class="form-control" name="new-post" id="new-post" rows="5" placeholder="Your Message"></textarea>
+                <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Your Message"></textarea>
                 <button type="submit" class="btn btn-task">Create </button>
+                <input type="hidden" value="{{ Session::token() }}" name="_token">
             </div>
         </form>
     </div>

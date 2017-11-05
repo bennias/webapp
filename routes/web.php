@@ -29,3 +29,8 @@ Route::post('/task','TasksController@create');
 
 Route::get('/task/{task}','TasksController@edit');
 Route::post('/task/{task}','TasksController@update');
+
+Route::post('/createpost',[
+   'uses' => 'PostController@postCreatePost',
+    'as' => 'post.create'
+]);

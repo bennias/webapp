@@ -9,9 +9,14 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    // hasMany -> Ein Nutzer kann mehrere haben
     public function tasks()
     {
     	return $this->hasMany(Task::class);
+    }
+
+    public function posts(){
+        return $this->hasMany('App\Post');
     }
 
     /**
