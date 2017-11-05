@@ -19,11 +19,10 @@
         <div class="col-md-12">
             <header><h3>Posts</h3></header>
             @foreach($posts as $post)
-                <article class="post">
+                <article class="post" data-postid="{{ $post->id }}">
                     <p>{{ $post->body }}</p>
                     <div class="info">
                         <p>posted by <strong>{{ $post->user->name }}</strong> on {{ $post->user->created_at }}</p>
-
                     </div>
                     <div class="interaction">
                         <a href="#">Like</a>|
@@ -59,10 +58,15 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" id="modal-save" class="btn btn-primary">Save changes</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        var token = '{{ Session::token() }}';
+        var url = ' {{ route('edit') }}';
+    </script>
 @endsection

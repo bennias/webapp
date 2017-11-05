@@ -24,10 +24,11 @@
     <div id="app">
     @include('includes.header')
 
-        @yield('content')
+    @yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

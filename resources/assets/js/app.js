@@ -1,24 +1,29 @@
 require('./bootstrap');
 
+var postId = 0;
+var postBodyCache = null;
+
 $('.posts').on('click', '.post .interaction .edit', function(event) {
 
-    var postBody = $(this).closest('.post').find('p:eq(0)').text();
+    postBodyCache = $(this).closest('.post').find('p:eq(0)');
+    var postBody = postBodyCache.text();
+    postId = event.target.parentNode.parentNode.dataset['postid'];
     $('#post-body').val(postBody);
-
-   $('#edit-modal').modal();
+    $('#edit-modal').modal();
 });
 
-/*
-window.Vue = require('vue');
+$('#modal-save').on('click', function () {
+   $.ajax({
+      method: 'POST',
+      url: url,
+      data: {body: $('#post-body').val(), postId: postId, _token: token}
+   })
+   .done(function (msg) {
+       /*console.log(JSON.stringify(msg));*/
+       $(postBodyCache).text(msg['new_body']);
+       $('#edit-modal').modal('hide');
+   });
+});
 
-/!**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- *!/
 
-Vue.component('example', require('./components/Example.vue'));
 
-const app = new Vue({
-    el: '#app'
-});*/
