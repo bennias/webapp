@@ -7083,10 +7083,6 @@ td:nth-child(2) form {
   margin-top: 5em;
 }
 
-.form-group {
-  padding: 1.5em 0;
-}
-
 .card-header {
   font-weight: bold;
 }
@@ -7210,5 +7206,13 @@ time {
 .container-posts {
   /*background: white;*/
   padding-top: 2.5em;
+}
+
+header h3 {
+  margin-bottom: 1.5em;
+}
+
+.post-list {
+  margin-top: 40px;
 }
 

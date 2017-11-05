@@ -16,7 +16,7 @@
         </div>
     </section>
     <section class="row posts">
-        <div class="col-md-12">
+        <div class="col-md-12 post-list">
             <header><h3>Posts</h3></header>
             @foreach($posts as $post)
                 <article class="post" data-postid="{{ $post->id }}">

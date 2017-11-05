@@ -8,7 +8,9 @@
             <a href="/task" class="btn btn-task">Add new Task</a>
         </div>
         <div class="container">
-            <h4>To Do</h4>
+            <header>
+                <h3>To-Do</h3>
+            </header>
             @foreach($user->tasks as $task)
                 <div class="row card">
                     <div class="card-header">
