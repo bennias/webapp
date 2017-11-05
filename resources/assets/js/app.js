@@ -4,7 +4,6 @@ var postId = 0;
 var postBodyCache = null;
 
 $('.posts').on('click', '.post .interaction .edit', function(event) {
-
     postBodyCache = $(this).closest('.post').find('p:eq(0)');
     var postBody = postBodyCache.text();
     postId = event.target.parentNode.parentNode.dataset['postid'];

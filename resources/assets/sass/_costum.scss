@@ -176,7 +176,9 @@ time{
     margin: 10vh 0 ;
 }
 .posts .post {
-    padding-left: 10px;
+    padding: 40px;
+    background: white;
+    box-shadow: $shadow;
     border-left: 2px solid $brand-blue;
     margin-bottom: 30px;
 
@@ -199,8 +201,9 @@ time{
     list-style: none;
 }
 .container-posts{
-    background: white;
+    /*background: white;*/
     padding-top: 2.5em;
 }
+
 // Styling
 

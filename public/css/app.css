@@ -7179,7 +7179,10 @@ time {
 }
 
 .posts .post {
-  padding-left: 10px;
+  padding: 40px;
+  background: white;
+  -webkit-box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.08);
   border-left: 2px solid #1563FF;
   margin-bottom: 30px;
 }
@@ -7205,7 +7208,7 @@ time {
 }
 
 .container-posts {
-  background: white;
+  /*background: white;*/
   padding-top: 2.5em;
 }
 
