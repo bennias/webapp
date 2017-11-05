@@ -4,10 +4,10 @@
     <div class="container container-posts">
     <section>
         <div class="col-md-12">
-            <header><h3>Allo Allo Waz up?</h3></header>
+            <header><h3>Hey {{ Auth::user()->name }}, nice to see you - what's up?</h3></header>
             <form action="{{ route('post.create') }}" method="post">
                 <div class="form-group">
-                    <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Your Message"></textarea>
+                    <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Tell your Story"></textarea>
                     <button type="submit" class="btn btn-task">Add new Post</button>
                     @include('includes.error-handling')
                     <input type="hidden" value="{{ Session::token() }}" name="_token">

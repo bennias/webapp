@@ -49,7 +49,7 @@ We use [Git](https://git-scm.com/) for versioning.
 
 ## Authors
 
-[Benni Asal](https://github.com/BenniAsal)  - *Initial work* -
+[Benni Asal](https://github.com/BenniAsal)  - *Initial work*
 
 
 ## License
