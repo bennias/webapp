@@ -20,7 +20,7 @@
             <header><h3>Posts</h3></header>
             @foreach($posts as $post)
                 <article class="post">
-                    <p>{{ $post -> body }}</p>
+                    <p>{{ $post->body }}</p>
                     <div class="info">
                         <p>posted by <strong>{{ $post->user->name }}</strong> on {{ $post->user->created_at }}</p>
 
@@ -31,7 +31,7 @@
 
                         @if(Auth::user() == $post-> user)
                             |
-                            <a href="#" id="post_edit" data-postid="{{ $post->id }}">Edit</a>|
+                            <a href="#" class="edit">Edit</a>|
                             <a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Delete</a>
                         @endif
 

@@ -755,8 +755,12 @@ module.exports = __webpack_require__(35);
 
 __webpack_require__(9);
 
-$('.post').find('.interaction').find('a').eq(2).on('click', function () {
-  $('#edit-modal').modal();
+$('.posts').on('click', '.post .interaction .edit', function (event) {
+
+    var postBody = $(this).closest('.post').find('p:eq(0)').text();
+    $('#post-body').val(postBody);
+
+    $('#edit-modal').modal();
 });
 
 /*

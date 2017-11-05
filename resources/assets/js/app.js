@@ -1,6 +1,10 @@
 require('./bootstrap');
 
-$('.post').find('.interaction').find('a').eq(2).on('click', function () {
+$('.posts').on('click', '.post .interaction .edit', function(event) {
+
+    var postBody = $(this).closest('.post').find('p:eq(0)').text();
+    $('#post-body').val(postBody);
+
    $('#edit-modal').modal();
 });
 
