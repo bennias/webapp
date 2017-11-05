@@ -7189,3 +7189,15 @@ time {
   font-style: italic;
 }
 
+.error ul {
+  color: firebrick;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.success {
+  color: #2ca02c;
+  list-style: none;
+}
+

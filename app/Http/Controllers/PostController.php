@@ -10,11 +10,17 @@ class PostController extends Controller
 {
     public function postCreatePost(Request $request)
     {
+        $this->validate($request,[
+            'body' => 'required|max:250'
+        ]);
         $post = new Post();
         $post->body = $request['body'];
-
+        $message = 'An Error happend';
         // Post relates to the User
-        $request->user()->posts()->save($post);
-        return redirect()->route('home');
+        if ($request->user()->posts()->save($post)){
+            $message = 'Post successfully created';
+        }
+
+        return redirect()->route('home')->with(['message' => $message]);
     }
 }
