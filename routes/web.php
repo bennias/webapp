@@ -17,14 +17,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-/*Route::get('/home', 'HomeController@index')->name('home');*/
+Route::get('/tasks',[
+    'uses' => 'TasksController@index',
+    'as' => 'tasks',
+    'middleware' => 'auth'
+]);
 
-// Route::get('/', 'TasksController@index');
-
-// Auth::routes();
-Route::get('/tasks', 'TasksController@index');
-
-Route::get('/task','TasksController@add');
+Route::get('/task',[
+    'uses' => 'TasksController@add',
+    'as' => 'task',
+    'middleware' => 'auth'
+]);
 Route::post('/task','TasksController@create');
 
 Route::get('/task/{task}','TasksController@edit');

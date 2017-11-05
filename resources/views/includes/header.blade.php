@@ -1,6 +1,6 @@
 <nav class="navbar navbar-inverse navbar-static-top navbar-toggleable-md">
     <!-- Branding Image -->
-    <a class="navbar-brand" href="{{ url('/home') }}">
+    <a class="navbar-brand" href="{{ url('/') }}">
         {{ config('app.name', 'BAS') }}
     </a>
     <!-- Right Side Of Navbar -->
@@ -16,11 +16,14 @@
 
         @else
             <li class="nav-item">
+                <a class="nav-link" href="{{ url('/home') }}">Forum</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{{ url('/tasks') }}">Tasks</a>
             </li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    {{ Auth::user()->name }} <span class="caret"></span>
+                    <strong>{{ Auth::user()->name }}</strong><span class="caret"></span>
                 </a>
 
                 <ul class="dropdown-menu dropdown-menu-right" role="menu">
