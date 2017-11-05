@@ -25,12 +25,11 @@
                         <p>posted by <strong>{{ $post->user->name }}</strong> on {{ $post->user->created_at }}</p>
                     </div>
                     <div class="interaction">
-                        <a href="#">Like</a>|
-                        <a href="#">Dislike</a>
+                        {{--<a href="#">Like</a>|
+                        <a href="#">Dislike</a>--}}
 
                         @if(Auth::user() == $post-> user)
-                            |
-                            <a href="#" class="edit">Edit</a>|
+                            <a href="#" class="edit">Edit</a>
                             <a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Delete</a>
                         @endif
 
