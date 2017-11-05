@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/*Route::get('/home', 'HomeController@index')->name('home');*/
 
 // Route::get('/', 'TasksController@index');
 
@@ -30,7 +30,20 @@ Route::post('/task','TasksController@create');
 Route::get('/task/{task}','TasksController@edit');
 Route::post('/task/{task}','TasksController@update');
 
+
+Route::get('/home',[
+    'uses' => 'PostController@getDashboard',
+    'as' => 'home',
+    'middleware' => 'auth'
+]);
+
 Route::post('/createpost',[
    'uses' => 'PostController@postCreatePost',
-    'as' => 'post.create'
+    'as' => 'post.create',
+    'middleware' => 'auth'
+]);
+Route::get('/delete-post/{post_id}',[
+    'uses' => 'PostController@getDeletePost',
+    'as' => 'post.delete',
+    'middleware' => 'auth'
 ]);

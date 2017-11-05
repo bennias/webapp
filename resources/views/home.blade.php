@@ -1,50 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('includes.error-handling')
+    <div class="container container-posts">
     <section>
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-12">
             <header><h3>Allo Allo Waz up?</h3></header>
             <form action="{{ route('post.create') }}" method="post">
                 <div class="form-group">
                     <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn-task">Create </button>
+                    <button type="submit" class="btn btn-task">Add new Post</button>
+                    @include('includes.error-handling')
                     <input type="hidden" value="{{ Session::token() }}" name="_token">
                 </div>
             </form>
         </div>
     </section>
     <section class="row posts">
-        <div class="col-md-6 col-md-3-offset">
+        <div class="col-md-12">
             <header><h3>What they say..</h3></header>
-            <article class="post">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laudantium minus officia pariatur totam. Aspernatur doloremque eos expedita iusto magnam nesciunt optio possimus qui voluptatum? Consequatur debitis fugiat modi repellendus? </p>
-                <div class="info">
-                    Posted by BAS on 04.11.2017
-                </div>
-                <div class="interaction">
-                    <a href="#">Like</a>
-                    <a href="#">Dislike</a>
-                    <a href="#">Edit</a>
-                    <a href="#">Delete</a>
-                </div>
-            </article>
-            <article class="post">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laudantium minus officia pariatur totam. Aspernatur doloremque eos expedita iusto magnam nesciunt optio possimus qui voluptatum? Consequatur debitis fugiat modi repellendus? </p>
-                <div class="info">
-                    Posted by BAS on 04.11.2017
-                </div>
-                <div class="interaction">
-                    <a href="#">Like</a>
-                    <a href="#">Dislike</a>
-                    <a href="#">Edit</a>
-                    <a href="#">Delete</a>
-                </div>
-            </article>
+            @foreach($posts as $post)
+                <article class="post">
+                    <p>{{ $post -> body }}</p>
+                    <div class="info">
+                        <p>posted by <strong>{{ $post->user->name }}</strong> on {{ $post->user->created_at }}</p>
 
+                    </div>
+                    <div class="interaction">
+                        <a href="#">Like</a>
+                        <a href="#">Dislike</a>
+                        <a href="#">Edit</a>
+                        <a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Delete</a>
+                    </div>
+                </article>
+            @endforeach
         </div>
     </section>
-
+    </div>
 
 
     {{--

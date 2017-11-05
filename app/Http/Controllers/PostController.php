@@ -8,6 +8,18 @@ use App\Post;
 
 class PostController extends Controller
 {
+    public function getDashboard()
+    {
+        /*
+        returns all posts in array post
+        accessible using $posts variable in view
+        */
+
+        $posts = Post::all();
+        return view('home', ['posts' => $posts]);
+    }
+
+
     public function postCreatePost(Request $request)
     {
         $this->validate($request,[
@@ -23,4 +35,13 @@ class PostController extends Controller
 
         return redirect()->route('home')->with(['message' => $message]);
     }
+
+    public function getDeletePost($post_id)
+    {
+        $post = Post::where('id', $post_id)->first();
+        $post->delete();
+        return redirect()->route('home')->with(['message' => 'Successfully deleted']);
+    }
+
+
 }
